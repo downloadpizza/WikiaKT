@@ -51,19 +51,30 @@ allowDuplicates: Boolean (Not required, Default: True)
 These parameters should be implemented as function parameters, with all weird JSON stuff replaced by canonical Kotlin code.
 Example one of the methods implemented:
 ```kotlin
-// file: activity/Activity.kt
-// this can later be imported as: "net.downloadpizza.wikiakt.activity.latestActivity", making for good namespacing
-
-fun Wikia.latestActivity(limit: Int, namespaces: List<Namespace>, allowDuplicates: Boolean = true): RequestResult<ActivityResponseResult> {
-    val nsList = namespaces.joinToString(",")
-    return get(
-        "Activity/LatestActivity",
-        listOf(
-            "limit" to limit,
-            "namespaces" to nsList,
-            "allowDuplicates" to allowDuplicates
+// file: endpoints/Activity.kt
+class Activity(private val api: Wikia) {
+    fun latestActivity(limit: Int, namespaces: List<Namespace>, allowDuplicates: Boolean = true): RequestResult<ActivityResponseResult> {
+        val nsList = namespaces.joinToString(",")
+        return api.get(
+            "Activity/LatestActivity",
+            listOf(
+                "limit" to limit,
+                "namespaces" to nsList,
+                "allowDuplicates" to allowDuplicates
+            )
         )
-    )
+    }
+}
+```
+
+There is also a corresponding property in the Wikia class:
+```kotlin
+// file: Wikia.kt
+class Wikia(val basepath: String) {
+    /* ... */
+
+    @WikiaDsl
+    val activity = Activity(this)
 }
 ```
 
