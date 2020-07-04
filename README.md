@@ -85,7 +85,7 @@ class Wikia(val basepath: String) {
     - [x] RecentlyChangedArticles
 - [ ] Articles
     - [ ] AsSimpleJson
-    - [ ] Details*
+    - [ ] Details
     - [ ] UnexplandedList
     - [ ] ExpandedList
     - [ ] UnexpandedMostLinked
@@ -101,15 +101,13 @@ class Wikia(val basepath: String) {
 - [ ] Navigation
     - [ ] Data
 - [ ] RelatedPages
-    - [ ] List*
+    - [ ] List
 - [ ] Search
     - [ ] UnexpandedCombined
     - [ ] ExpandedCombined
-    - [ ] List*
+    - [ ] List
 - [ ] SearchSuggestions
-    - [ ] List*
+    - [ ] List
 - [ ] User
-    - [ ] Details*
+    - [ ] Details
     - [ ] UsersByName
-
-* Duplicated names for the extension functions, still thinking of a way to get namespacing right
