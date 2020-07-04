@@ -67,17 +67,6 @@ class Activity(private val api: Wikia) {
 }
 ```
 
-There is also a corresponding property in the Wikia class:
-```kotlin
-// file: Wikia.kt
-class Wikia(val basepath: String) {
-    /* ... */
-
-    @WikiaDsl
-    val activity = Activity(this)
-}
-```
-
 # Implemented Modules and Endpoints
 
 - [x] Activity
