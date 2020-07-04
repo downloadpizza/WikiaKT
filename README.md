@@ -66,3 +66,36 @@ fun Wikia.latestActivity(limit: Int, namespaces: List<Namespace>, allowDuplicate
     )
 }
 ```
+
+# Implemented Modules and Endpoints
+- [x] Activity
+    - [x] LatesActivity
+    - [x] RecentlyChangedArticles
+- [ ] Articles
+    - [ ] AsSimpleJson
+    - [ ] Details
+    - [ ] UnexplandedList
+    - [ ] ExpandedList
+    - [ ] UnexpandedMostLinked
+    - [ ] ExpandedMostLinked
+    - [ ] New
+    - [ ] UnexpandedPopular
+    - [ ] ExpandedPopular
+    - [ ] UnexpandedTop
+    - [ ] ExpandedTop
+    - [ ] TopByHub
+- [ ] Mercury
+    - [ ] WikiVariables
+- [ ] Navigation
+    - [ ] Data
+- [ ] RelatedPages
+    - [ ] List
+- [ ] Search
+    - [ ] UnexpandedCombined
+    - [ ] ExpandedCombined
+    - [ ] List
+- [ ] SearchSuggestions
+    - [ ] List
+- [ ] User
+    - [ ] Details
+    - [ ] UsersByName
