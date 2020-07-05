@@ -41,6 +41,8 @@ Or as a JSON schema (also found on the website):
 
 These are supposed to be implemented as data classes with the same name is in the API
 
+They can be pasted into a file and then converted with the `schema.py` file, which automaitcally builds kotlin data classes
+
 After the Response Schema, you can find the parameters, for the two methods mentioned above, these are:
 ```
 limit: Int
