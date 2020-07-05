@@ -12,7 +12,7 @@ Example for an endpoint module:
 [The activity module with its 2 methods](https://jellesmarbleruns.fandom.com/api/v1/#!/Activity)
 
 You can find the response models in the API docs, they look like this:
-```
+```php
 ActivityResponseResult {
     items (array[ActivityResponseItem]): Standard container name for element collection (list),
     basepath (string): Common URL prefix for relative URLs
@@ -41,7 +41,7 @@ Or as a JSON schema (also found on the website):
 
 These are supposed to be implemented as data classes with the same name is in the API
 
-They can be pasted into a file and then converted with the `schema.py` file, which automaitcally builds kotlin data classes
+The first schema, the not JSON one, can be pasted into a file and then converted with the `schema.py` file, which automaitcally builds kotlin data classes
 
 After the Response Schema, you can find the parameters, for the two methods mentioned above, these are:
 ```
@@ -75,10 +75,10 @@ class Activity(private val api: Wikia) {
     - [x] LatesActivity
     - [x] RecentlyChangedArticles
 - [ ] Articles
-    - [ ] AsSimpleJson
-    - [ ] Details
-    - [ ] UnexplandedList
-    - [ ] ExpandedList
+    - [x] AsSimpleJson
+    - [x] Details
+    - [x] UnexplandedList
+    - [x] ExpandedList
     - [ ] UnexpandedMostLinked
     - [ ] ExpandedMostLinked
     - [ ] New
