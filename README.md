@@ -74,19 +74,19 @@ class Activity(private val api: Wikia) {
 - [x] Activity
     - [x] LatesActivity
     - [x] RecentlyChangedArticles
-- [ ] Articles
+- [x] Articles
     - [x] AsSimpleJson
     - [x] Details
     - [x] UnexplandedList
     - [x] ExpandedList
-    - [ ] UnexpandedMostLinked
-    - [ ] ExpandedMostLinked
-    - [ ] New
-    - [ ] UnexpandedPopular
-    - [ ] ExpandedPopular
-    - [ ] UnexpandedTop
-    - [ ] ExpandedTop
-    - [ ] TopByHub
+    - [x] UnexpandedMostLinked
+    - [x] ExpandedMostLinked
+    - [x] New
+    - [x] UnexpandedPopular
+    - [x] ExpandedPopular
+    - [x] UnexpandedTop
+    - [x] ExpandedTop
+    - [x] TopByHub
 - [ ] Mercury
     - [ ] WikiVariables
 - [ ] Navigation
