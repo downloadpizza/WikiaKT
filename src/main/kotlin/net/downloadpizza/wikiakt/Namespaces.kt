@@ -1,7 +1,5 @@
 package net.downloadpizza.wikiakt
 
-typealias Namespace = Int
-
 object DefaultNameSpaces {
     const val Media = -2
     const val Special = -1

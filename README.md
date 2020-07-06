@@ -87,8 +87,8 @@ class Activity(private val api: Wikia) {
     - [x] UnexpandedTop
     - [x] ExpandedTop
     - [x] TopByHub
-- [ ] Mercury
-    - [ ] WikiVariables
+- [x] Mercury
+    - [x] WikiVariables
 - [ ] Navigation
     - [ ] Data
 - [ ] RelatedPages

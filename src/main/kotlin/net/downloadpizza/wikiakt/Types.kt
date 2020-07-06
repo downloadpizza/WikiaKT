@@ -172,3 +172,52 @@ data class ActivityResponseItem(
     val revisionId: Int,
     val timestamp: Int
 )
+
+data class WikiDataContainer(
+    val data: WikiData
+)
+data class WikiData(
+    val cacheBuster: Int,
+    val dbName: String,
+    val defaultSkin: String,
+    val id: Int,
+    val language: WikiLanguageData,
+    val namespaces: List<NamespacesObject>,
+    val sitename: String,
+    val mainPageTitle: String,
+    val wikiCategories: List<String>,
+    val navData: NavigationResultSet,
+    val vertical: String,
+    val basePath: String,
+    val isGASpecialWiki: Boolean,
+    val articlePath: String,
+    val facebookAppId: String
+)
+
+data class NamespacesObject(
+    val id: Int,
+    val name: String
+)
+
+data class WikiLanguageData(
+    val user: String,
+    val userDir: String,
+    val content: String,
+    val contentDir: String
+)
+data class NavigationResultSet(
+    val navigation: NavigationItem
+)
+data class NavigationItem(
+    val wikia: List<WikiaItem>,
+    val wiki: List<WikiaItem>
+)
+data class WikiaItem(
+    val text: String,
+    val href: String,
+    val children: List<ChildrenItem>
+)
+data class ChildrenItem(
+    val text: String,
+    val href: String
+)

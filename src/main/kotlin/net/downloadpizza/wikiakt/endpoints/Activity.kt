@@ -4,29 +4,29 @@ import net.downloadpizza.wikiakt.*
 
 class Activity(private val api: WikiaApi) {
     fun latestActivity(
-        limit: Int,
-        namespaces: List<Namespace>,
-        allowDuplicates: Boolean = true
+        limit: Int? = null,
+        namespaces: List<Int>? = null,
+        allowDuplicates: Boolean? = null
     ): RequestResult<ActivityResponseResult> =
         api.get(
             "Activity/LatestActivity",
             listOf(
                 "limit" to limit,
-                "namespaces" to namespaces.intCommaList(),
+                "namespaces" to namespaces?.intCommaList(),
                 "allowDuplicates" to allowDuplicates
             )
         )
 
     fun recentlyChanged(
-        limit: Int,
-        namespaces: List<Namespace>,
-        allowDuplicates: Boolean = true
+        limit: Int? = null,
+        namespaces: List<Int>? = null,
+        allowDuplicates: Boolean? = null
     ): RequestResult<ActivityResponseResult> =
         api.get(
             "Activity/RecentlyChanged",
             listOf(
                 "limit" to limit,
-                "namespaces" to namespaces.intCommaList(),
+                "namespaces" to namespaces?.intCommaList(),
                 "allowDuplicates" to allowDuplicates
             )
         )

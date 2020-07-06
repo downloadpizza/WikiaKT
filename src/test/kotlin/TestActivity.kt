@@ -1,3 +1,5 @@
+import com.github.kittinunf.fuel.Fuel
+import com.github.kittinunf.result.getAs
 import net.downloadpizza.wikiakt.WikiaApi
 import net.downloadpizza.wikiakt.value
 import org.junit.jupiter.api.Test
