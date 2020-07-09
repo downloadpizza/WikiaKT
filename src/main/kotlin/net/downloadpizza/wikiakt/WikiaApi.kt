@@ -2,12 +2,10 @@ package net.downloadpizza.wikiakt
 
 import com.beust.klaxon.Klaxon
 import com.github.kittinunf.fuel.Fuel
-import net.downloadpizza.wikiakt.endpoints.Activity
-import net.downloadpizza.wikiakt.endpoints.Articles
-import net.downloadpizza.wikiakt.endpoints.Mercury
+import net.downloadpizza.wikiakt.endpoints.*
 import com.github.kittinunf.result.Result as FuelResult
 
-open class WikiaApi(val basepath: String) {
+class WikiaApi(val basepath: String) {
     val klaxon = Klaxon()
 
     inline fun <reified T : Any> get(
@@ -23,7 +21,9 @@ open class WikiaApi(val basepath: String) {
         return klaxon.parse<T>(str)?.run(::Ok) ?: Err("Failed to parse JSON")
     }
 
-    val activity = Activity(this)
-    val articles = Articles(this)
-    val mercury = Mercury(this)
+    val activity = ActivityModule(this)
+    val articles = ArticlesModule(this)
+    val mercury = MercuryModule(this)
+    val navigation = NavigationModule(this)
+    val relatedPages = RelatedPagesModule(this)
 }

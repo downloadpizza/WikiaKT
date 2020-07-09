@@ -2,7 +2,7 @@ package net.downloadpizza.wikiakt.endpoints
 
 import net.downloadpizza.wikiakt.*
 
-class Activity(private val api: WikiaApi) {
+class ActivityModule(private val api: WikiaApi) {
     fun latestActivity(
         limit: Int? = null,
         namespaces: List<Int>? = null,

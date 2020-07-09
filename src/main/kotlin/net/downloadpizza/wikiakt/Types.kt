@@ -221,3 +221,15 @@ data class ChildrenItem(
     val text: String,
     val href: String
 )
+
+data class RelatedPages(
+    val items: List<RelatedPage>?,
+    val basepath: String?
+)
+data class RelatedPage(
+    val url: String,
+    val text: String?,
+    val imgUrl: String?,
+    val id: Int,
+    val title: String
+)

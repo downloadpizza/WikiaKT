@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 
 const val BASEPATH = "https://jellesmarbleruns.fandom.com"
 
-class TestActivity {
+class TestActivityModule {
     private val api = WikiaApi(BASEPATH)
 
     @Test

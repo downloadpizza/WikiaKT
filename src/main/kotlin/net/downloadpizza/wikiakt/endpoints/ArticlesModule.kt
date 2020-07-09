@@ -2,7 +2,7 @@ package net.downloadpizza.wikiakt.endpoints
 
 import net.downloadpizza.wikiakt.*
 
-class Articles(private val api: WikiaApi) {
+class ArticlesModule(private val api: WikiaApi) {
     fun asSimpleJson(
         id: Int
     ): RequestResult<ContentResult> =

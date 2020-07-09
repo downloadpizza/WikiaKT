@@ -89,10 +89,10 @@ class Activity(private val api: Wikia) {
     - [x] TopByHub
 - [x] Mercury
     - [x] WikiVariables
-- [ ] Navigation
-    - [ ] Data
-- [ ] RelatedPages
-    - [ ] List
+- [x] Navigation
+    - [x] Data
+- [x] RelatedPages
+    - [x] List
 - [ ] Search
     - [ ] UnexpandedCombined
     - [ ] ExpandedCombined
